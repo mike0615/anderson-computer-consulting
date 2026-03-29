@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <div class="breadcrumb-acc">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span class="sep">/</span>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <span class="sep">/</span>
+      <span>{{ page.title }}</span>
+    </div>
+    {% if page.category %}<p class="page-header-label">{{ page.category }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <p style="color:var(--text2);font-family:var(--mono);font-size:13px;margin-top:12px;">
+      {{ page.date | date: "%B %d, %Y" }}
+      {% if page.author %} &nbsp;·&nbsp; {{ page.author }}{% endif %}
+      {% if page.read_time %} &nbsp;·&nbsp; {{ page.read_time }} min read{% endif %}
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-acc">
+    <div style="max-width:780px;">
+      {{ content }}
+    </div>
+  </div>
+</div>

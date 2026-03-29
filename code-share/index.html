@@ -1,0 +1,89 @@
+---
+layout: default
+title: Code Share
+description: Production-ready Ansible playbooks, Python scripts, Bash tools, Cisco IOS configs, and Juniper JunOS templates.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">Resources</p>
+    <h1>Code Share</h1>
+    <p>Production-tested scripts, playbooks, and configs — free to use in your environment.</p>
+    <div class="search-box" style="margin-top:20px;max-width:520px;">
+      <input type="text" id="snippet-search" class="search-input" placeholder="Search snippets...">
+      <i class="bi bi-search search-icon"></i>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+
+    <!-- Language filter -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;">
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('all')">All</button>
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('ansible')">Ansible</button>
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('python')">Python</button>
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('bash')">Bash</button>
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('cisco-ios')">Cisco IOS</button>
+      <button class="kb-tag" style="cursor:pointer;padding:6px 14px;" onclick="filterSnippets('juniper-junos')">JunOS</button>
+    </div>
+
+    {% if site.snippets.size > 0 %}
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px;" id="snippet-grid">
+      {% for snippet in site.snippets %}
+      <div class="snippet-card" data-searchable data-lang="{{ snippet.language | downcase }}">
+        <div class="snippet-header">
+          <div>
+            <div style="font-weight:700;color:var(--text0);font-size:14px;">{{ snippet.title }}</div>
+            {% if snippet.description %}<div style="font-size:12px;color:var(--text2);margin-top:2px;">{{ snippet.description }}</div>{% endif %}
+          </div>
+          <span class="snippet-lang">{{ snippet.language }}</span>
+        </div>
+        <div class="snippet-body">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+            <div>{% if snippet.tags %}{% for tag in snippet.tags %}<span class="kb-tag">{{ tag }}</span>{% endfor %}{% endif %}</div>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <a href="{{ snippet.url | relative_url }}" style="display:block;padding:12px 16px;font-size:13px;color:var(--cyan);">
+            View Full Snippet <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="card-acc" style="text-align:center;padding:48px;">
+      <i class="bi bi-code-slash" style="font-size:40px;color:var(--text2);"></i>
+      <p style="color:var(--text1);margin-top:16px;">Snippets coming soon. Check back shortly.</p>
+    </div>
+    {% endif %}
+
+    <!-- Submit section -->
+    <div class="card-acc" style="margin-top:48px;border-color:rgba(0,229,255,.2);">
+      <div style="display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;">
+        <div style="font-size:32px;color:var(--cyan);"><i class="bi bi-git"></i></div>
+        <div>
+          <h3 style="margin-bottom:8px;">Submit a Snippet</h3>
+          <p style="color:var(--text1);font-size:14px;margin-bottom:16px;">
+            Have a useful config, script, or playbook? Submit it via GitHub pull request.
+            All submissions are reviewed before publishing.
+          </p>
+          <a href="https://github.com/mike0615/anderson-computer-consulting" target="_blank" class="btn-outline" style="font-size:13px;">
+            <i class="bi bi-github"></i> Submit on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function filterSnippets(lang) {
+  const cards = document.querySelectorAll('#snippet-grid [data-lang]');
+  cards.forEach(card => {
+    card.style.display = (lang === 'all' || card.dataset.lang === lang) ? '' : 'none';
+  });
+}
+</script>

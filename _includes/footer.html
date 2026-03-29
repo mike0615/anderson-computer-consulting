@@ -1,0 +1,63 @@
+<footer class="acc-footer">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;flex-wrap:wrap;">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand">
+          <img src="{{ '/assets/images/logo/acc-logo.svg' | relative_url }}" alt="Anderson Computer Consulting">
+        </div>
+        <p class="footer-tagline">Enterprise-grade infrastructure and consulting services. Air-gapped capable. Mission-ready.</p>
+        <div style="display:flex;gap:12px;margin-top:16px;">
+          <a href="https://github.com/mike0615" target="_blank" style="color:var(--text2);font-size:20px;" title="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" style="color:var(--text2);font-size:20px;" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="footer-heading">Services</p>
+        <ul class="footer-links">
+          <li><a href="{{ '/services/network-engineering/' | relative_url }}">Network Engineering</a></li>
+          <li><a href="{{ '/services/managed-it/' | relative_url }}">Managed IT</a></li>
+          <li><a href="{{ '/services/cybersecurity/' | relative_url }}">Cybersecurity</a></li>
+          <li><a href="{{ '/services/cloud-services/' | relative_url }}">Cloud Services</a></li>
+          <li><a href="{{ '/services/government-consulting/' | relative_url }}">Government</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-links">
+          <li><a href="{{ '/knowledge-base/' | relative_url }}">Knowledge Base</a></li>
+          <li><a href="{{ '/code-share/' | relative_url }}">Code Share</a></li>
+          <li><a href="{{ '/downloads/' | relative_url }}">Downloads</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/case-studies/' | relative_url }}">Case Studies</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="{{ '/about/' | relative_url }}">About ACC</a></li>
+          <li><a href="{{ '/about/team/' | relative_url }}">Our Team</a></li>
+          <li><a href="{{ '/about/certifications/' | relative_url }}">Certifications</a></li>
+          <li><a href="{{ '/about/partners/' | relative_url }}">Partners</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; {{ 'now' | date: "%Y" }} Anderson Computer Consulting. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="{{ '/legal/privacy/' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/legal/terms/' | relative_url }}">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

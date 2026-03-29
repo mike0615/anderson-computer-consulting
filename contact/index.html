@@ -1,0 +1,105 @@
+---
+layout: default
+title: Contact Us
+description: Get in touch with Anderson Computer Consulting for a free consultation.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">Get In Touch</p>
+    <h1>Contact Us</h1>
+    <p>Ready to discuss your project? We'll respond within one business day.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start;flex-wrap:wrap;">
+
+      <!-- Contact Form -->
+      <div>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label class="form-label-acc">First Name *</label>
+              <input type="text" name="first_name" class="form-control-acc" required placeholder="Mike">
+            </div>
+            <div>
+              <label class="form-label-acc">Last Name *</label>
+              <input type="text" name="last_name" class="form-control-acc" required placeholder="Anderson">
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label-acc">Email Address *</label>
+            <input type="email" name="email" class="form-control-acc" required placeholder="you@company.com">
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label-acc">Company / Organization</label>
+            <input type="text" name="company" class="form-control-acc" placeholder="Your Company">
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label class="form-label-acc">Service Interest</label>
+            <select name="service" class="form-control-acc" style="cursor:pointer;">
+              <option value="">Select a service...</option>
+              <option>Network Engineering</option>
+              <option>Managed IT</option>
+              <option>Cybersecurity</option>
+              <option>Cloud Services</option>
+              <option>Government Consulting</option>
+              <option>Professional Services</option>
+              <option>Other / General Inquiry</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:24px;">
+            <label class="form-label-acc">Message *</label>
+            <textarea name="message" class="form-control-acc" required placeholder="Tell us about your project, environment, and what you need..."></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New ACC Contact Form Submission">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit" class="btn-cyan" style="width:100%;padding:14px;">Send Message</button>
+          <p style="font-size:12px;color:var(--text2);margin-top:12px;text-align:center;">
+            We respond within 1 business day. No spam, ever.
+          </p>
+        </form>
+      </div>
+
+      <!-- Contact Info sidebar -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <div class="card-acc">
+          <div class="card-icon"><i class="bi bi-envelope"></i></div>
+          <div class="card-title">Email</div>
+          <a href="mailto:contact@andersoncomputerconsulting.com" style="font-size:13px;color:var(--text1);">
+            contact@andersoncomputerconsulting.com
+          </a>
+        </div>
+
+        <div class="card-acc">
+          <div class="card-icon green"><i class="bi bi-geo-alt"></i></div>
+          <div class="card-title">Location</div>
+          <p style="font-size:13px;color:var(--text1);margin:0;">Sebastian, Florida</p>
+        </div>
+
+        <div class="card-acc">
+          <div class="card-icon amber"><i class="bi bi-clock"></i></div>
+          <div class="card-title">Response Time</div>
+          <p style="font-size:13px;color:var(--text1);margin:0;">Within 1 business day</p>
+        </div>
+
+        <div class="card-acc" style="border-color:rgba(0,229,255,.2);">
+          <p style="font-size:13px;color:var(--text1);margin:0;line-height:1.6;">
+            <i class="bi bi-shield-check" style="color:var(--cyan);margin-right:8px;"></i>
+            All inquiries are confidential. We do not share your information.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

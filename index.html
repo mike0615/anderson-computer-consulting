@@ -1,0 +1,190 @@
+---
+layout: default
+title: Home
+---
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container-acc">
+    <div class="hero-content fade-in-up">
+      <div class="hero-badge">Enterprise Infrastructure Consulting</div>
+      <h1>Enterprise-Grade Infrastructure.<br><span>Mission-Ready</span> Solutions.</h1>
+      <p class="hero-sub">
+        Anderson Computer Consulting delivers enterprise network engineering,
+        cybersecurity, managed IT, and government technology consulting.
+        Air-gapped capable. Production ready. Built to last.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ '/contact/' | relative_url }}" class="btn-cyan">Get a Free Consultation</a>
+        <a href="{{ '/services/' | relative_url }}" class="btn-outline">View Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value" data-count="30" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-count="200" data-suffix="+">0+</div>
+          <div class="hero-stat-label">Projects Delivered</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-count="100" data-suffix="%">0%</div>
+          <div class="hero-stat-label">Air-Gap Capable</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-count="24" data-suffix="/7">0/7</div>
+          <div class="hero-stat-label">Support Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ── -->
+<section class="section">
+  <div class="container-acc">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Services Built for <span>Enterprise Demands</span></h2>
+    <p class="section-sub">From complex multi-site networks to ICD 503 government compliance — we architect, deploy, and operate infrastructure that performs under pressure.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+      {% for svc in site.data.services %}
+      <div class="card-acc observe-fade">
+        <div class="card-icon {{ svc.color }}"><i class="bi {{ svc.icon }}"></i></div>
+        <h3 class="card-title">{{ svc.title }}</h3>
+        <p class="card-body-text">{{ svc.tagline }}</p>
+        <a href="{{ svc.url | relative_url }}" class="card-link">Learn More <i class="bi bi-arrow-right"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats Bar ── -->
+<div class="stats-bar">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+      <div class="stat-item">
+        <div class="stat-value">ICD 503</div>
+        <div class="stat-label">Compliance Ready</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Multi-Site</div>
+        <div class="stat-label">Enterprise Networks</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Air-Gap</div>
+        <div class="stat-label">Offline Capable</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Ansible</div>
+        <div class="stat-label">Automation-First</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Why ACC ── -->
+<section class="section section-dark">
+  <div class="container-acc">
+    <p class="section-label">Why Choose ACC</p>
+    <h2 class="section-title">Built by an Engineer.<br><span>Designed for Engineers.</span></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:0;">
+
+      <div class="card-acc observe-fade">
+        <div class="card-icon"><i class="bi bi-award"></i></div>
+        <h3 class="card-title">30+ Years of Real Experience</h3>
+        <p class="card-body-text">U.S. Navy Chief Information Systems Technician. Lead Systems Engineer on active government programs. We don't just consult — we operate production infrastructure daily.</p>
+      </div>
+
+      <div class="card-acc observe-fade">
+        <div class="card-icon green"><i class="bi bi-wifi"></i></div>
+        <h3 class="card-title">Multi-Vendor, Multi-Site Expertise</h3>
+        <p class="card-body-text">Cisco, Juniper, FreeIPA, XCP-ng, KVM, Graylog, Wazuh, LibreNMS — we work across the entire enterprise stack and make it all work together.</p>
+      </div>
+
+      <div class="card-acc observe-fade">
+        <div class="card-icon amber"><i class="bi bi-lock-fill"></i></div>
+        <h3 class="card-title">Air-Gapped & Security-First</h3>
+        <p class="card-body-text">Every design starts with security. We specialize in air-gapped, offline-capable infrastructure that meets government and enterprise security requirements.</p>
+      </div>
+
+      <div class="card-acc observe-fade">
+        <div class="card-icon purple"><i class="bi bi-robot"></i></div>
+        <h3 class="card-title">Automation-Driven Delivery</h3>
+        <p class="card-body-text">Ansible-first deployments, GitLab CI/CD, reproducible builds. Every solution we deliver is automated, documented, and ready to hand to your team.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Markets ── -->
+<section class="section">
+  <div class="container-acc">
+    <p class="section-label">Who We Serve</p>
+    <h2 class="section-title">Solutions Across <span>Every Market</span></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+
+      <a href="{{ '/markets/federal-government/' | relative_url }}" class="kb-category-card observe-fade">
+        <div style="font-size:28px;margin-bottom:12px;"><i class="bi bi-building" style="color:var(--cyan)"></i></div>
+        <h3>Federal Government</h3>
+        <p>ICD 503, FISMA, NIST-compliant infrastructure for government programs and defense contractors.</p>
+      </a>
+
+      <a href="{{ '/markets/enterprise/' | relative_url }}" class="kb-category-card observe-fade">
+        <div style="font-size:28px;margin-bottom:12px;"><i class="bi bi-diagram-3" style="color:var(--green)"></i></div>
+        <h3>Enterprise</h3>
+        <p>Multi-site network architecture, managed services, and infrastructure modernization for large organizations.</p>
+      </a>
+
+      <a href="{{ '/markets/small-business/' | relative_url }}" class="kb-category-card observe-fade">
+        <div style="font-size:28px;margin-bottom:12px;"><i class="bi bi-shop" style="color:var(--amber)"></i></div>
+        <h3>Small Business</h3>
+        <p>Enterprise-grade IT without the enterprise price tag. Managed IT, security, and cloud services scaled for SMBs.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── KB/Code Promo ── -->
+<section class="section section-dark">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+
+      <div class="card-acc" style="border-color:rgba(0,229,255,.2);">
+        <div style="font-size:32px;color:var(--cyan);margin-bottom:12px;"><i class="bi bi-book"></i></div>
+        <h3 style="font-size:1.2rem;margin-bottom:8px;">Knowledge Base</h3>
+        <p class="card-body-text">Technical guides on networking, virtualization, identity management, security, and automation — written from real production experience.</p>
+        <a href="{{ '/knowledge-base/' | relative_url }}" class="btn-outline" style="margin-top:20px;display:inline-block;">Browse Articles</a>
+      </div>
+
+      <div class="card-acc" style="border-color:rgba(167,139,250,.2);">
+        <div style="font-size:32px;color:var(--purple);margin-bottom:12px;"><i class="bi bi-code-slash"></i></div>
+        <h3 style="font-size:1.2rem;margin-bottom:8px;">Code Share</h3>
+        <p class="card-body-text">Production-ready Ansible playbooks, Python scripts, Bash tools, Cisco IOS configs, and Juniper JunOS templates — free to use.</p>
+        <a href="{{ '/code-share/' | relative_url }}" class="btn-ghost" style="margin-top:20px;display:inline-block;border-color:rgba(167,139,250,.4);color:var(--purple);">Browse Snippets</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="section" style="text-align:center;">
+  <div class="container-acc">
+    <p class="section-label">Ready to Get Started?</p>
+    <h2 class="section-title" style="margin-bottom:12px;">Let's Build Something <span>Mission-Ready</span></h2>
+    <p style="color:var(--text1);max-width:480px;margin:0 auto 36px;">
+      Whether you need a full infrastructure design or targeted consulting support, we're ready to deliver.
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ '/contact/' | relative_url }}" class="btn-cyan">Schedule a Consultation</a>
+      <a href="{{ '/about/' | relative_url }}" class="btn-outline">Learn About ACC</a>
+    </div>
+  </div>
+</section>

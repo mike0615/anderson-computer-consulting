@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <div class="breadcrumb-acc">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span class="sep">/</span>
+      <a href="{{ '/knowledge-base/' | relative_url }}">Knowledge Base</a>
+      {% if page.category %}
+      <span class="sep">/</span>
+      <a href="{{ '/knowledge-base/categories/' | append: page.category | downcase | relative_url }}">{{ page.category }}</a>
+      {% endif %}
+      <span class="sep">/</span>
+      <span>{{ page.title }}</span>
+    </div>
+    <p class="page-header-label">Knowledge Base</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    <div style="display:flex;align-items:center;gap:12px;margin-top:12px;">
+      {% if page.tags %}
+        {% for tag in page.tags %}
+        <span class="kb-tag">{{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+      {% if page.updated %}<span style="font-size:12px;color:var(--text2);font-family:var(--mono);">Updated: {{ page.updated }}</span>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start;">
+      <article style="max-width:100%;">
+        {{ content }}
+      </article>
+      <aside>
+        <div class="card-acc" style="position:sticky;top:80px;">
+          <p style="font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-family:var(--mono);margin-bottom:12px;">On This Page</p>
+          <div id="toc" style="font-size:13px;color:var(--text1);"></div>
+          <hr>
+          <a href="{{ '/knowledge-base/' | relative_url }}" class="card-link" style="font-size:13px;">
+            <i class="bi bi-arrow-left"></i> Back to Knowledge Base
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script>
+// Auto-generate TOC from headings
+const headings = document.querySelectorAll('article h2, article h3');
+const toc = document.getElementById('toc');
+if (headings.length > 0 && toc) {
+  headings.forEach(h => {
+    if (!h.id) h.id = h.textContent.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.style.cssText = `display:block;padding:4px 0;color:var(--text1);font-size:${h.tagName === 'H3' ? '12' : '13'}px;padding-left:${h.tagName === 'H3' ? '12' : '0'}px;`;
+    a.addEventListener('mouseover', () => a.style.color = 'var(--cyan)');
+    a.addEventListener('mouseout',  () => a.style.color = 'var(--text1)');
+    toc.appendChild(a);
+  });
+}
+</script>

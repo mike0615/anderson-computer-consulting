@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog
+description: Technical insights, how-tos, and industry perspective from Anderson Computer Consulting.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">Insights</p>
+    <h1>Blog</h1>
+    <p>Technical insights and real-world engineering perspectives from the ACC team.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+    {% if site.posts.size > 0 %}
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;">
+      {% for post in site.posts %}
+      <div class="post-card">
+        <div class="post-card-body">
+          <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+          {% if post.category %}<span class="kb-tag" style="margin-bottom:10px;display:inline-block;">{{ post.category }}</span>{% endif %}
+          <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+          <a href="{{ post.url | relative_url }}" class="card-link" style="margin-top:12px;">
+            Read More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="card-acc" style="text-align:center;padding:60px;">
+      <i class="bi bi-pencil-square" style="font-size:40px;color:var(--text2);"></i>
+      <p style="color:var(--text1);margin-top:16px;">Articles coming soon.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

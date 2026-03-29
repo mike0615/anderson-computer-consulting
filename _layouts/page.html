@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    {% if page.breadcrumb %}
+    <div class="breadcrumb-acc">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      {% for crumb in page.breadcrumb %}
+      <span class="sep">/</span>
+      {% if forloop.last %}
+      <span>{{ crumb.title }}</span>
+      {% else %}
+      <a href="{{ crumb.url | relative_url }}">{{ crumb.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if page.label %}<p class="page-header-label">{{ page.label }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-acc">
+    {{ content }}
+  </div>
+</div>

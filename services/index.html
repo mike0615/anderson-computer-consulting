@@ -1,0 +1,28 @@
+---
+layout: default
+title: Services
+description: Enterprise network engineering, cybersecurity, managed IT, cloud services, and government consulting from Anderson Computer Consulting.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">What We Do</p>
+    <h1>Services</h1>
+    <p>Production-ready solutions across the full enterprise infrastructure stack.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;">
+      {% for svc in site.data.services %}
+      <div class="card-acc">
+        <div class="card-icon {{ svc.color }}"><i class="bi {{ svc.icon }}"></i></div>
+        <h3 class="card-title" style="font-size:1.1rem;">{{ svc.title }}</h3>
+        <p class="card-body-text">{{ svc.tagline }}</p>
+        <a href="{{ svc.url | relative_url }}" class="card-link">View Service <i class="bi bi-arrow-right"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+main:
+  - title: Services
+    url: /services/
+    children:
+      - title: Network Engineering
+        url: /services/network-engineering/
+      - title: Managed IT
+        url: /services/managed-it/
+      - title: Cybersecurity
+        url: /services/cybersecurity/
+      - title: Cloud Services
+        url: /services/cloud-services/
+      - title: Government Consulting
+        url: /services/government-consulting/
+      - title: Professional Services
+        url: /services/professional-services/
+  - title: Markets
+    url: /markets/
+    children:
+      - title: Federal Government
+        url: /markets/federal-government/
+      - title: Enterprise
+        url: /markets/enterprise/
+      - title: Small Business
+        url: /markets/small-business/
+  - title: About
+    url: /about/
+    children:
+      - title: Our Team
+        url: /about/team/
+      - title: Certifications
+        url: /about/certifications/
+      - title: Partners
+        url: /about/partners/
+  - title: Knowledge Base
+    url: /knowledge-base/
+  - title: Code Share
+    url: /code-share/
+  - title: Downloads
+    url: /downloads/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/

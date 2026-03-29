@@ -1,0 +1,41 @@
+- id: network-engineering
+  title: Network Engineering
+  icon: bi-diagram-3
+  tagline: Multi-site, multi-vendor enterprise network design and operations
+  url: /services/network-engineering/
+  color: cyan
+
+- id: managed-it
+  title: Managed IT
+  icon: bi-server
+  tagline: Fully managed infrastructure with proactive monitoring and response
+  url: /services/managed-it/
+  color: green
+
+- id: cybersecurity
+  title: Cybersecurity
+  icon: bi-shield-lock
+  tagline: ICD 503 compliance, Wazuh SIEM, and enterprise security hardening
+  url: /services/cybersecurity/
+  color: amber
+
+- id: cloud-services
+  title: Cloud Services
+  icon: bi-cloud-arrow-up
+  tagline: Air-gapped cloud alternatives and hybrid infrastructure design
+  url: /services/cloud-services/
+  color: purple
+
+- id: government-consulting
+  title: Government Consulting
+  icon: bi-building
+  tagline: ICD 503, FISMA, NIST frameworks for government program support
+  url: /services/government-consulting/
+  color: red
+
+- id: professional-services
+  title: Professional Services
+  icon: bi-tools
+  tagline: Project-based engineering, documentation, and training
+  url: /services/professional-services/
+  color: cyan

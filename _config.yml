@@ -1,0 +1,83 @@
+title: Anderson Computer Consulting
+tagline: Enterprise-Grade Infrastructure. Mission-Ready Solutions.
+description: >-
+  Anderson Computer Consulting delivers enterprise network engineering,
+  cybersecurity, managed IT, and government technology consulting services.
+  Air-gapped capable. Production ready.
+url: "https://mike0615.github.io"
+baseurl: "/anderson-computer-consulting"
+author:
+  name: Mike Anderson
+  email: contact@andersoncomputerconsulting.com
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  kb:
+    output: true
+    permalink: /knowledge-base/:path/
+  snippets:
+    output: true
+    permalink: /code-share/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "kb"
+    values:
+      layout: "kb-article"
+  - scope:
+      path: ""
+      type: "snippets"
+    values:
+      layout: "snippet"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - .git
+
+# Navigation (also in _data/navigation.yml)
+nav_links:
+  - title: Services
+    url: /services/
+  - title: Markets
+    url: /markets/
+  - title: About
+    url: /about/
+  - title: Knowledge Base
+    url: /knowledge-base/
+  - title: Code Share
+    url: /code-share/
+  - title: Downloads
+    url: /downloads/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/

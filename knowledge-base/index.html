@@ -1,0 +1,87 @@
+---
+layout: default
+title: Knowledge Base
+description: Technical guides on networking, virtualization, identity management, security, and automation.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">Resources</p>
+    <h1>Knowledge Base</h1>
+    <p>Production-tested guides written from real enterprise and government environments.</p>
+    <div class="search-box" style="margin-top:20px;max-width:520px;">
+      <input type="text" id="kb-search" class="search-input" placeholder="Search articles...">
+      <i class="bi bi-search search-icon"></i>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+
+    <!-- Categories -->
+    <p class="section-label">Browse by Category</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:56px;">
+
+      <a href="{{ '/knowledge-base/categories/networking' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--cyan);margin-bottom:10px;"><i class="bi bi-diagram-3"></i></div>
+        <h3>Networking</h3>
+        <p>Cisco, Juniper, BGP, OSPF, VLANs, WAN, packet analysis</p>
+      </a>
+
+      <a href="{{ '/knowledge-base/categories/virtualization' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--green);margin-bottom:10px;"><i class="bi bi-server"></i></div>
+        <h3>Virtualization</h3>
+        <p>XCP-ng, KVM, Docker, CloudStack, storage and networking</p>
+      </a>
+
+      <a href="{{ '/knowledge-base/categories/identity' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--amber);margin-bottom:10px;"><i class="bi bi-person-lock"></i></div>
+        <h3>Identity & Access</h3>
+        <p>FreeIPA, LDAP, Kerberos, certificates, MFA</p>
+      </a>
+
+      <a href="{{ '/knowledge-base/categories/security' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--red);margin-bottom:10px;"><i class="bi bi-shield-lock"></i></div>
+        <h3>Security</h3>
+        <p>Wazuh, Graylog, hardening, ICD 503, FISMA, NIST</p>
+      </a>
+
+      <a href="{{ '/knowledge-base/categories/automation' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--purple);margin-bottom:10px;"><i class="bi bi-robot"></i></div>
+        <h3>Automation</h3>
+        <p>Ansible, GitLab CI/CD, Python, Bash, Robot Framework</p>
+      </a>
+
+      <a href="{{ '/knowledge-base/categories/virtualization' | relative_url }}" class="kb-category-card" data-searchable>
+        <div style="font-size:24px;color:var(--cyan);margin-bottom:10px;"><i class="bi bi-hdd-network"></i></div>
+        <h3>Infrastructure</h3>
+        <p>Rocky Linux, air-gapped builds, offline repos, RPM packaging</p>
+      </a>
+
+    </div>
+
+    <!-- All Articles -->
+    <p class="section-label">All Articles</p>
+    {% if site.kb.size > 0 %}
+    <ul class="kb-article-list">
+      {% for article in site.kb %}
+      <li data-searchable>
+        <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
+        <div class="kb-meta">
+          {% if article.category %}<span>{{ article.category }}</span> &nbsp;·&nbsp; {% endif %}
+          {% if article.tags %}{% for tag in article.tags %}<span class="kb-tag">{{ tag }}</span>{% endfor %}{% endif %}
+          {% if article.updated %}&nbsp;·&nbsp; Updated: {{ article.updated }}{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="card-acc" style="text-align:center;padding:48px;">
+      <i class="bi bi-book" style="font-size:40px;color:var(--text2);"></i>
+      <p style="color:var(--text1);margin-top:16px;">Articles coming soon. Check back shortly.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

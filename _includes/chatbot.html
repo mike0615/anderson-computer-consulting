@@ -1,0 +1,24 @@
+<!-- Floating Chatbot Widget -->
+<!-- Powered by Botpress (free tier) — see assets/js/chatbot.js to configure -->
+
+<button class="chatbot-toggle" title="Chat with ACC Assistant" aria-label="Open chat">
+  <img src="{{ '/assets/images/mascot/mascot.png' | relative_url }}" alt="ACC Assistant">
+</button>
+
+<div class="chatbot-window" role="dialog" aria-label="ACC Chat Assistant">
+  <div class="chatbot-header">
+    <img src="{{ '/assets/images/mascot/mascot.png' | relative_url }}" class="chatbot-avatar" alt="ACC Assistant">
+    <div>
+      <div class="chatbot-name">ACC Assistant</div>
+      <div class="chatbot-status">● Online</div>
+    </div>
+    <button class="chatbot-close" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="chatbot-body"></div>
+  <div class="chatbot-input-area">
+    <input class="chatbot-input" type="text" placeholder="Ask me anything..." maxlength="500" autocomplete="off">
+    <button class="chatbot-send">Send</button>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/chatbot.js' | relative_url }}"></script>

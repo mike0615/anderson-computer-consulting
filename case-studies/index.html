@@ -1,0 +1,61 @@
+---
+layout: default
+title: Case Studies
+description: Real-world infrastructure projects delivered by Anderson Computer Consulting.
+---
+
+<div class="page-header">
+  <div class="container-acc">
+    <p class="page-header-label">Our Work</p>
+    <h1>Case Studies</h1>
+    <p>Real engineering challenges. Real solutions. Real results.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-acc">
+    {% if site.pages contains 'case-studies' %}
+      <!-- Case studies loaded from _posts with category: case-study -->
+    {% endif %}
+
+    <!-- Placeholder cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;">
+
+      <div class="card-acc">
+        <span class="badge-acc" style="margin-bottom:16px;">Government · Network</span>
+        <h3 class="card-title">Multi-Site Air-Gapped Enterprise Network</h3>
+        <p class="card-body-text">Designed and deployed a fully offline, multi-location enterprise network with centralized FreeIPA identity, GitLab, Graylog, and LibreNMS — all with zero internet dependency.</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:16px;">
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">OUTCOME</div><div style="font-size:13px;color:var(--green);">100% Air-Gapped</div></div>
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">PLATFORM</div><div style="font-size:13px;color:var(--cyan);">Rocky Linux + XCP-ng</div></div>
+        </div>
+      </div>
+
+      <div class="card-acc">
+        <span class="badge-acc" style="margin-bottom:16px;">Enterprise · Automation</span>
+        <h3 class="card-title">Infrastructure Automation with Ansible + GitLab</h3>
+        <p class="card-body-text">Replaced manual configuration management with a full Ansible + GitLab CI/CD pipeline, reducing deployment time and enforcing configuration compliance across 50+ hosts.</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:16px;">
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">OUTCOME</div><div style="font-size:13px;color:var(--green);">90% Faster Deploys</div></div>
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">TOOLS</div><div style="font-size:13px;color:var(--cyan);">Ansible + GitLab</div></div>
+        </div>
+      </div>
+
+      <div class="card-acc">
+        <span class="badge-acc" style="margin-bottom:16px;">Government · Security</span>
+        <h3 class="card-title">ICD 503 Compliance Implementation</h3>
+        <p class="card-body-text">Led security architecture design and implementation to achieve ICD 503 compliance on a multi-site government program network, including SIEM integration and hardening documentation.</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:16px;">
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">OUTCOME</div><div style="font-size:13px;color:var(--green);">ICD 503 Compliant</div></div>
+          <div><div style="font-size:11px;color:var(--text2);font-family:var(--mono);">TOOLS</div><div style="font-size:13px;color:var(--cyan);">Wazuh + Graylog</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-acc" style="margin-top:40px;text-align:center;padding:40px;border-color:rgba(0,229,255,.15);">
+      <p style="color:var(--text1);">Interested in seeing how we've solved problems like yours?</p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-cyan" style="margin-top:12px;">Discuss Your Project</a>
+    </div>
+  </div>
+</section>
