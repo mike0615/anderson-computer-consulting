@@ -18,78 +18,26 @@ description: Tools, templates, whitepapers, and scripts from Anderson Computer C
 
 <section class="section">
   <div class="container-acc">
-
-    <!-- Tools -->
-    <p class="section-label" style="margin-bottom:16px;">Tools & Scripts</p>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;" id="tools-list">
-      <div class="download-item" data-searchable>
-        <div class="download-icon"><i class="bi bi-file-earmark-code"></i></div>
-        <div class="download-info">
-          <div class="download-name">Network Baseline Script</div>
-          <div class="download-meta">Bash · Collects interface stats, ARP, routing tables from Cisco/Juniper</div>
-        </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
-
-      <div class="download-item" data-searchable>
-        <div class="download-icon"><i class="bi bi-file-earmark-code"></i></div>
-        <div class="download-info">
-          <div class="download-name">FreeIPA Health Check Script</div>
-          <div class="download-meta">Bash · Checks replication, DNS, cert expiry, and service health</div>
-        </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
-    </div>
-
-    <!-- Templates -->
-    <p class="section-label" style="margin-bottom:16px;">Templates</p>
+    {% for group in site.data.downloads.groups %}
+    <p class="section-label" style="margin-bottom:16px;">{{ group.title }}</p>
     <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;">
-      <div class="download-item" data-searchable>
-        <div class="download-icon" style="color:var(--amber);"><i class="bi bi-file-earmark-word"></i></div>
+      {% for item in group.items %}
+      <a href="{{ item.path | relative_url }}" class="download-item" data-searchable>
+        <div class="download-icon" {% if item.color %}style="color:var(--{{ item.color }});" {% endif %}><i class="bi {{ item.icon }}"></i></div>
         <div class="download-info">
-          <div class="download-name">Network Architecture Document Template</div>
-          <div class="download-meta">DOCX · Professional network architecture document with all standard sections</div>
+          <div class="download-name">{{ item.name }}</div>
+          <div class="download-meta">{{ item.format }} · {{ item.description }}</div>
         </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
-
-      <div class="download-item" data-searchable>
-        <div class="download-icon" style="color:var(--amber);"><i class="bi bi-file-earmark-spreadsheet"></i></div>
-        <div class="download-info">
-          <div class="download-name">IP Address Management Spreadsheet</div>
-          <div class="download-meta">XLSX · VLAN, subnet, and IP tracking template</div>
-        </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
+        <span style="font-size:12px;color:var(--green);font-family:var(--mono);margin-right:12px;">Available</span>
+      </a>
+      {% endfor %}
     </div>
-
-    <!-- Whitepapers -->
-    <p class="section-label" style="margin-bottom:16px;">Whitepapers</p>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;">
-      <div class="download-item" data-searchable>
-        <div class="download-icon" style="color:var(--purple);"><i class="bi bi-file-earmark-pdf"></i></div>
-        <div class="download-info">
-          <div class="download-name">Building an Air-Gapped Enterprise Network</div>
-          <div class="download-meta">PDF · Architecture guide for fully offline enterprise environments</div>
-        </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
-
-      <div class="download-item" data-searchable>
-        <div class="download-icon" style="color:var(--purple);"><i class="bi bi-file-earmark-pdf"></i></div>
-        <div class="download-info">
-          <div class="download-name">VMware to XCP-ng Migration Guide</div>
-          <div class="download-meta">PDF · Step-by-step migration strategy and architecture considerations</div>
-        </div>
-        <span style="font-size:12px;color:var(--text2);font-family:var(--mono);margin-right:12px;">Coming Soon</span>
-      </div>
-    </div>
+    {% endfor %}
 
     <div class="card-acc" style="border-color:rgba(0,229,255,.15);margin-top:32px;">
       <p style="color:var(--text1);font-size:14px;margin:0;">
         <i class="bi bi-info-circle" style="color:var(--cyan);margin-right:8px;"></i>
-        Files are being uploaded regularly. Have a resource request?
-        <a href="{{ '/contact/' | relative_url }}">Contact us</a> and we'll add it.
+        These resources are plain-text friendly on purpose so they are easy to review and edit in VS Code, Obsidian, Typora, MarkText, or other Markdown-aware editors.
       </p>
     </div>
 

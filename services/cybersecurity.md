@@ -2,6 +2,7 @@
 layout: page
 title: Cybersecurity
 label: Services
+permalink: /services/cybersecurity/
 subtitle: ICD 503 compliance, enterprise SIEM, and security hardening.
 breadcrumb:
   - title: Services

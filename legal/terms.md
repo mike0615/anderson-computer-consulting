@@ -2,6 +2,7 @@
 layout: page
 title: Terms of Service
 label: Legal
+permalink: /legal/terms/
 ---
 
 *Last updated: {{ site.time | date: "%B %d, %Y" }}*

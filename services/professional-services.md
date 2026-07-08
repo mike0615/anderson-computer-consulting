@@ -2,6 +2,7 @@
 layout: page
 title: Professional Services
 label: Services
+permalink: /services/professional-services/
 subtitle: Project-based engineering, documentation, and training.
 breadcrumb:
   - title: Services

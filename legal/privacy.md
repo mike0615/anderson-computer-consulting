@@ -2,6 +2,7 @@
 layout: page
 title: Privacy Policy
 label: Legal
+permalink: /legal/privacy/
 ---
 
 *Last updated: {{ site.time | date: "%B %d, %Y" }}*

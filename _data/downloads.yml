@@ -1,0 +1,43 @@
+groups:
+  - title: Tools and Scripts
+    items:
+      - name: FreeIPA Replication Check Script
+        format: Bash
+        description: Checks replication agreements, backlog, and recent replication health signals on a FreeIPA node.
+        icon: bi-file-earmark-code
+        color: cyan
+        path: /assets/downloads/scripts/freeipa-replication-check.sh
+      - name: Network Architecture Discovery Checklist
+        format: Markdown
+        description: Discovery checklist for enterprise network, identity, platform, security, and operations workshops.
+        icon: bi-file-earmark-text
+        color: cyan
+        path: /assets/downloads/templates/network-architecture-discovery-checklist.md
+  - title: Templates
+    items:
+      - name: IP Address Plan Template
+        format: CSV
+        description: Starter spreadsheet structure for VLANs, subnets, gateways, owners, and notes.
+        icon: bi-file-earmark-spreadsheet
+        color: amber
+        path: /assets/downloads/templates/ip-address-plan-template.csv
+      - name: Air-Gapped Platform Planning Worksheet
+        format: Markdown
+        description: Planning worksheet for offline repos, identity, monitoring, CI/CD, and operational support paths.
+        icon: bi-file-earmark-text
+        color: amber
+        path: /assets/downloads/templates/air-gapped-platform-planning-worksheet.md
+  - title: Whitepapers and Guides
+    items:
+      - name: XCP-ng Evaluation Criteria
+        format: Markdown
+        description: Practical criteria for comparing XCP-ng, KVM, and VMware during migration planning.
+        icon: bi-file-earmark-richtext
+        color: purple
+        path: /assets/downloads/guides/xcp-ng-evaluation-criteria.md
+      - name: Government Infrastructure Intake Worksheet
+        format: Markdown
+        description: Engagement intake guide for security frameworks, accreditation constraints, and delivery expectations.
+        icon: bi-file-earmark-richtext
+        color: purple
+        path: /assets/downloads/guides/government-infrastructure-intake-worksheet.md

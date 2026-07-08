@@ -7,10 +7,10 @@
         <div class="footer-brand">
           <img src="{{ '/assets/images/logo/acc-logo.svg' | relative_url }}" alt="Anderson Computer Consulting">
         </div>
-        <p class="footer-tagline">Enterprise-grade infrastructure and consulting services. Air-gapped capable. Mission-ready.</p>
+        <p class="footer-tagline">{{ site.data.company.tagline }} {{ site.data.company.subtitle }}</p>
         <div style="display:flex;gap:12px;margin-top:16px;">
-          <a href="https://github.com/mike0615" target="_blank" style="color:var(--text2);font-size:20px;" title="GitHub"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com" target="_blank" style="color:var(--text2);font-size:20px;" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="{{ site.data.company.github }}" target="_blank" style="color:var(--text2);font-size:20px;" title="GitHub"><i class="bi bi-github"></i></a>
+          <a href="{{ site.data.company.linkedin }}" target="_blank" style="color:var(--text2);font-size:20px;" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
 

@@ -2,6 +2,7 @@
 layout: page
 title: Our Team
 label: About
+permalink: /about/team/
 breadcrumb:
   - title: About
     url: /about/
@@ -23,6 +24,8 @@ breadcrumb:
 <p>Mike's daily work spans FreeIPA identity management, Cisco and Juniper network operations, XCP-ng virtualization, and enterprise automation with Ansible and GitLab. His philosophy: build complete ecosystems, automate everything, and document it properly.</p>
 
 <p><strong>Specialties:</strong> Multi-site network architecture · ICD 503 compliance · XCP-ng/KVM virtualization · FreeIPA · Ansible automation · Air-gapped infrastructure</p>
+<p><strong>Business brands:</strong> Anderson Computer Consulting · Just A Little Technical · Anderson's Attic</p>
+<p><a href="https://www.linkedin.com/in/mikeanderson2/" target="_blank">Connect on LinkedIn</a></p>
 </div>
 </div>
 
@@ -30,7 +33,7 @@ breadcrumb:
 
 ## Shelby Anderson — Operations Support
 
-<p>Shelby works alongside Mike supporting day-to-day operations, client coordination, and project delivery. Contact us to learn more about our team and how we can support your project.</p>
+<p>Shelby supports day-to-day operations, client coordination, scheduling, and delivery follow-through so projects stay organized from discovery through handoff.</p>
 
 ---
 

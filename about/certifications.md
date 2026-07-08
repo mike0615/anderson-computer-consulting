@@ -2,6 +2,7 @@
 layout: page
 title: Certifications & Qualifications
 label: About
+permalink: /about/certifications/
 breadcrumb:
   - title: About
     url: /about/
@@ -41,6 +42,7 @@ breadcrumb:
 ### Automation & DevOps
 - Ansible (playbooks, roles, collections)
 - GitLab CI/CD
+- GitHub Actions
 - Robot Framework testing
 - Python, Bash scripting
 

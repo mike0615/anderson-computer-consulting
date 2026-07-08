@@ -2,6 +2,7 @@
 layout: page
 title: Government Consulting
 label: Services
+permalink: /services/government-consulting/
 subtitle: ICD 503, FISMA, and NIST frameworks for government program support.
 breadcrumb:
   - title: Services

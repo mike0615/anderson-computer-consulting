@@ -2,6 +2,7 @@
 layout: page
 title: Managed IT
 label: Services
+permalink: /services/managed-it/
 subtitle: Fully managed infrastructure with proactive monitoring and response.
 breadcrumb:
   - title: Services

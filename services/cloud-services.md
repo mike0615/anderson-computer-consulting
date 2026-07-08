@@ -2,6 +2,7 @@
 layout: page
 title: Cloud Services
 label: Services
+permalink: /services/cloud-services/
 subtitle: Air-gapped cloud alternatives and hybrid infrastructure design.
 breadcrumb:
   - title: Services

@@ -21,6 +21,44 @@ bundle exec jekyll serve --livereload
 
 Site runs at `http://localhost:4000`
 
+## Content Editing Workflow
+
+The site is intentionally structured so the most common edits do **not** require touching raw HTML.
+
+### Best places to edit in VS Code
+
+| What you want to change | Where to edit |
+|---|---|
+| About and company pages | `about/*.md` |
+| Service pages | `services/*.md` |
+| Market pages | `markets/*.md` |
+| Blog posts | `_posts/*.md` |
+| Knowledge base articles | `_kb/**/*.md` |
+| Code snippets | `_snippets/**/*.md` |
+| Download inventory | `_data/downloads.yml` |
+| Company profile and homepage highlights | `_data/company.yml` |
+| Contact details and intake options | `_data/contact.yml` |
+| Downloadable templates and guides | `assets/downloads/**` |
+
+### WYSIWYG-friendly editing
+
+If you prefer a richer editor experience, use a Markdown-aware editor such as:
+
+- **Typora**
+- **MarkText**
+- **Obsidian**
+
+These work well with the Markdown-based pages, posts, KB articles, snippets, and downloadable templates in this repo.
+
+### VS Code recommendations
+
+This repo includes `.vscode/extensions.json` with recommended extensions for:
+
+- Markdown authoring
+- YAML editing
+- formatting
+- linting
+
 ## Deploying to GitHub Pages
 
 1. Push to `main` branch
@@ -34,11 +72,12 @@ Site runs at `http://localhost:4000`
 3. Go to Share → Embed → copy webchat URL
 4. Edit `assets/js/chatbot.js` — set `BOTPRESS_EMBED_URL` to your URL
 
-## Contact Form Setup (Formspree)
+## Contact Form Setup (Optional Hosted Form)
 
 1. Sign up at [formspree.io](https://formspree.io)
 2. Create a form and get your form ID
-3. Edit `contact/index.html` — replace `YOUR_FORM_ID` in the form action URL
+3. Edit `_data/contact.yml` and set `form_action` to your hosted form endpoint
+4. If `form_action` is blank, the site automatically shows direct email/LinkedIn contact options instead of a broken form
 
 ## Adding Content
 
@@ -80,7 +119,7 @@ excerpt: Brief description
 ```
 
 ### Download File
-Place file in `assets/downloads/<category>/` and add an entry to `downloads/index.html`.
+Place file in `assets/downloads/<category>/` and add an entry to `_data/downloads.yml`.
 
 ## Structure
 

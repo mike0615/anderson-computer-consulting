@@ -2,6 +2,7 @@
 layout: page
 title: About Anderson Computer Consulting
 label: About ACC
+permalink: /about/
 subtitle: Built by a veteran engineer. Designed for enterprise demands.
 ---
 
@@ -10,6 +11,16 @@ subtitle: Built by a veteran engineer. Designed for enterprise demands.
 Anderson Computer Consulting (ACC) is a Florida-based technology consulting firm founded by Mike Anderson — a retired U.S. Navy Chief Information Systems Technician with over 30 years of hands-on IT experience.
 
 We specialize in enterprise network engineering, cybersecurity, managed IT, and government technology consulting. Every solution we deliver is air-gapped capable, automation-driven, and production-ready.
+
+## What Makes ACC Different
+
+ACC is built around a working engineer mindset:
+
+- solve the real problem, not just the obvious symptom
+- automate whatever will need to be repeated
+- document the environment like another team has to inherit it
+- prefer open-source and offline-capable designs whenever practical
+- leave behind a platform your team can actually operate
 
 ## Our Philosophy
 
@@ -34,6 +45,15 @@ We don't sell products — we build solutions. Every engagement starts with unde
 - **ICD 503** security framework operations
 - **Multi-site enterprise network** design and operations
 - **Daily stack:** FreeIPA, Cisco, Juniper, XCP-ng, KVM, Ansible, GitLab, Graylog, Wazuh, LibreNMS
+
+## Focus Areas
+
+- FreeIPA enterprise deployment and migration
+- Rocky Linux 9 and 10 standardization
+- Air-gapped automation pipelines
+- XCP-ng and Xen Orchestra adoption
+- Unified admin and monitoring platforms
+- AI-assisted infrastructure workflows
 
 <div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;">
 <a href="{{ '/about/team/' | relative_url }}" class="btn-cyan">Meet the Team</a>

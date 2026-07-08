@@ -2,6 +2,7 @@
 layout: page
 title: Network Engineering
 label: Services
+permalink: /services/network-engineering/
 subtitle: Multi-site, multi-vendor enterprise network design and operations.
 breadcrumb:
   - title: Services

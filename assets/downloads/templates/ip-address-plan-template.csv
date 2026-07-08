@@ -1,0 +1,4 @@
+Site,Location,VLAN_ID,VLAN_Name,Subnet_CIDR,Gateway,DHCP_Range,DNS_Zone,Owner,Notes
+HQ,Sebastian,10,User-Access,10.10.10.0/24,10.10.10.1,10.10.10.100-10.10.10.199,corp.example.local,Network Team,Primary user access VLAN
+HQ,Sebastian,20,Server,10.10.20.0/24,10.10.20.1,,corp.example.local,Platform Team,Static addressing only
+HQ,Sebastian,30,Management,10.10.30.0/24,10.10.30.1,10.10.30.100-10.10.30.150,corp.example.local,Operations,Restricted admin subnet

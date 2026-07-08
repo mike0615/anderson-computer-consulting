@@ -1,0 +1,21 @@
+form_action: ""
+response_time: Within 1 business day
+email: contact@andersoncomputerconsulting.com
+linkedin: https://www.linkedin.com/in/mikeanderson2/
+location: Sebastian, Florida
+service_options:
+  - Network Engineering
+  - Managed IT
+  - Cybersecurity
+  - Cloud Services
+  - Government Consulting
+  - Professional Services
+  - Architecture Review
+  - Automation and Platform Engineering
+  - Other / General Inquiry
+intake_points:
+  - Business or mission need
+  - Current environment and major platforms
+  - Security or compliance constraints
+  - Timeline, urgency, and desired outcomes
+  - Whether the environment is connected, restricted, or air-gapped

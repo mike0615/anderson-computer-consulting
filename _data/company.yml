@@ -1,0 +1,49 @@
+name: Anderson Computer Consulting
+short_name: ACC
+tagline: Enterprise-Grade Infrastructure. Mission-Ready Solutions.
+subtitle: Air-gapped capable. Open-source first. Production ready.
+location: Sebastian, Florida
+email: contact@andersoncomputerconsulting.com
+linkedin: https://www.linkedin.com/in/mikeanderson2/
+github: https://github.com/mike0615
+founder:
+  name: Mike Anderson
+  title: Founder and Lead Systems Engineer
+  background: Retired U.S. Navy Chief Information Systems Technician with 30+ years in IT, networking, systems engineering, and enterprise infrastructure delivery.
+hero_stats:
+  - count: 30
+    suffix: "+"
+    label: Years Experience
+  - count: 3
+    suffix: ""
+    label: Active Brands
+  - count: 100
+    suffix: "%"
+    label: Air-Gap Capable
+  - count: 6
+    suffix: ""
+    label: Core Focus Areas
+strengths:
+  - icon: bi-award
+    color: cyan
+    title: 30+ Years of Real Experience
+    body: Retired U.S. Navy Chief Information Systems Technician. Active lead systems engineer on government programs. Real production experience across network, platform, and security layers.
+  - icon: bi-diagram-3
+    color: green
+    title: Multi-Site Architecture and Operations
+    body: Designs and operates specialized multi-location infrastructure delivering shared services, secure connectivity, and enterprise-grade reliability.
+  - icon: bi-lock-fill
+    color: amber
+    title: Air-Gapped and Security-First
+    body: Specializes in offline-capable, security-hardened infrastructure shaped by ICD 503, FISMA, NIST, and practical operational constraints.
+  - icon: bi-robot
+    color: purple
+    title: Automation-Driven Delivery
+    body: Uses Ansible, CI/CD, scripting, and repeatable builds so the final environment is maintainable by your team instead of depending on tribal knowledge.
+focus_areas:
+  - FreeIPA enterprise deployment and migration
+  - Rocky Linux 9 and 10 infrastructure standardization
+  - Air-gapped automation pipelines
+  - XCP-ng adoption and enterprise positioning
+  - Unified admin and monitoring platforms
+  - AI integration into infrastructure and workflows

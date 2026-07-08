@@ -2,6 +2,7 @@
 layout: page
 title: Technology Partners
 label: About
+permalink: /about/partners/
 breadcrumb:
   - title: About
     url: /about/

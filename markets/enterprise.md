@@ -2,6 +2,7 @@
 layout: page
 title: Enterprise
 label: Markets
+permalink: /markets/enterprise/
 breadcrumb:
   - title: Markets
     url: /markets/

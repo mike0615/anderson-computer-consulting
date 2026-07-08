@@ -10,7 +10,7 @@ layout: default
       <a href="{{ '/knowledge-base/' | relative_url }}">Knowledge Base</a>
       {% if page.category %}
       <span class="sep">/</span>
-      <a href="{{ '/knowledge-base/categories/' | append: page.category | downcase | relative_url }}">{{ page.category }}</a>
+      <a href="{{ '/knowledge-base/categories/' | append: page.category | downcase | append: '/' | relative_url }}">{{ page.category }}</a>
       {% endif %}
       <span class="sep">/</span>
       <span>{{ page.title }}</span>

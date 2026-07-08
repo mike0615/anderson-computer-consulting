@@ -20,22 +20,12 @@ title: Home
         <a href="{{ '/services/' | relative_url }}" class="btn-outline">View Services</a>
       </div>
       <div class="hero-stats">
+        {% for stat in site.data.company.hero_stats %}
         <div>
-          <div class="hero-stat-value" data-count="30" data-suffix="+">0+</div>
-          <div class="hero-stat-label">Years Experience</div>
+          <div class="hero-stat-value" data-count="{{ stat.count }}" data-suffix="{{ stat.suffix }}">0{{ stat.suffix }}</div>
+          <div class="hero-stat-label">{{ stat.label }}</div>
         </div>
-        <div>
-          <div class="hero-stat-value" data-count="200" data-suffix="+">0+</div>
-          <div class="hero-stat-label">Projects Delivered</div>
-        </div>
-        <div>
-          <div class="hero-stat-value" data-count="100" data-suffix="%">0%</div>
-          <div class="hero-stat-label">Air-Gap Capable</div>
-        </div>
-        <div>
-          <div class="hero-stat-value" data-count="24" data-suffix="/7">0/7</div>
-          <div class="hero-stat-label">Support Available</div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -93,30 +83,31 @@ title: Home
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:0;">
 
+      {% for item in site.data.company.strengths %}
       <div class="card-acc observe-fade">
-        <div class="card-icon"><i class="bi bi-award"></i></div>
-        <h3 class="card-title">30+ Years of Real Experience</h3>
-        <p class="card-body-text">U.S. Navy Chief Information Systems Technician. Lead Systems Engineer on active government programs. We don't just consult — we operate production infrastructure daily.</p>
+        <div class="card-icon {{ item.color }}"><i class="bi {{ item.icon }}"></i></div>
+        <h3 class="card-title">{{ item.title }}</h3>
+        <p class="card-body-text">{{ item.body }}</p>
       </div>
+      {% endfor %}
 
-      <div class="card-acc observe-fade">
-        <div class="card-icon green"><i class="bi bi-wifi"></i></div>
-        <h3 class="card-title">Multi-Vendor, Multi-Site Expertise</h3>
-        <p class="card-body-text">Cisco, Juniper, FreeIPA, XCP-ng, KVM, Graylog, Wazuh, LibreNMS — we work across the entire enterprise stack and make it all work together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Focus Areas ── -->
+<section class="section">
+  <div class="container-acc">
+    <p class="section-label">Current Focus</p>
+    <h2 class="section-title">Where We Are Building <span>Right Now</span></h2>
+    <p class="section-sub">ACC is focused on infrastructure programs that need secure delivery, repeatable builds, and engineering depth across network, platform, and operations layers.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+      {% for area in site.data.company.focus_areas %}
+      <div class="kb-category-card observe-fade">
+        <div style="font-size:20px;color:var(--cyan);margin-bottom:10px;"><i class="bi bi-check2-circle"></i></div>
+        <h3 style="font-size:1rem;">{{ area }}</h3>
       </div>
-
-      <div class="card-acc observe-fade">
-        <div class="card-icon amber"><i class="bi bi-lock-fill"></i></div>
-        <h3 class="card-title">Air-Gapped & Security-First</h3>
-        <p class="card-body-text">Every design starts with security. We specialize in air-gapped, offline-capable infrastructure that meets government and enterprise security requirements.</p>
-      </div>
-
-      <div class="card-acc observe-fade">
-        <div class="card-icon purple"><i class="bi bi-robot"></i></div>
-        <h3 class="card-title">Automation-Driven Delivery</h3>
-        <p class="card-body-text">Ansible-first deployments, GitLab CI/CD, reproducible builds. Every solution we deliver is automated, documented, and ready to hand to your team.</p>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
